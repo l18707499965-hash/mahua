@@ -1,58 +1,85 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import { SiteHeader } from '@/components/site-header';
+import { SiteFooter } from '@/components/site-footer';
+import { BaiduTongji, BaiduAutoPush } from '@/components/analytics';
+import {
+  SITE_NAME,
+  SITE_DESCRIPTION,
+  SITE_KEYWORDS,
+  getSiteUrl,
+} from '@/lib/site';
+
+const siteUrl = getSiteUrl();
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: {
-    default: '新应用 | 扣子编程',
-    template: '%s | 扣子编程',
+    default: `${SITE_NAME}官网 - 安卓版免费下载安装 | 口袋里的随身影院`,
+    template: `%s | ${SITE_NAME}官网`,
   },
-  description:
-    '扣子编程是一款一站式云端 Vibe Coding 开发平台。通过对话轻松构建智能体、工作流和网站，实现从创意到上线的无缝衔接。',
-  keywords: [
-    '扣子编程',
-    'Coze Code',
-    'Vibe Coding',
-    'AI 编程',
-    '智能体搭建',
-    '工作流搭建',
-    '网站搭建',
-    '网站部署',
-    '全栈开发',
-    'AI 工程师',
-  ],
-  authors: [{ name: 'Coze Code Team', url: 'https://code.coze.cn' }],
-  generator: 'Coze Code',
-  // icons: {
-  //   icon: '',
-  // },
+  description: SITE_DESCRIPTION,
+  keywords: SITE_KEYWORDS,
+  applicationName: SITE_NAME,
+  authors: [{ name: `${SITE_NAME}团队` }],
+  generator: 'Next.js',
+  referrer: 'strict-origin-when-cross-origin',
+  alternates: {
+    canonical: '/',
+  },
+  icons: {
+    icon: [{ url: '/icon.svg', type: 'image/svg+xml' }, { url: '/favicon-64.png', sizes: '64x64', type: 'image/png' }],
+    apple: [{ url: '/apple-icon.png', sizes: '180x180', type: 'image/png' }],
+  },
   openGraph: {
-    title: '扣子编程 | 你的 AI 工程师已就位',
-    description:
-      '我正在使用扣子编程 Vibe Coding，让创意瞬间上线。告别拖拽，拥抱心流。',
-    url: 'https://code.coze.cn',
-    siteName: '扣子编程',
+    title: `${SITE_NAME} - 口袋里的随身影院`,
+    description: SITE_DESCRIPTION,
+    url: siteUrl,
+    siteName: SITE_NAME,
     locale: 'zh_CN',
     type: 'website',
-    // images: [
-    //   {
-    //     url: '',
-    //     width: 1200,
-    //     height: 630,
-    //     alt: '扣子编程 - 你的 AI 工程师',
-    //   },
-    // ],
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: `${SITE_NAME}安卓版免费下载`,
+      },
+    ],
   },
-  // twitter: {
-  //   card: 'summary_large_image',
-  //   title: 'Coze Code | Your AI Engineer is Here',
-  //   description:
-  //     'Build and deploy full-stack applications through AI conversation. No env setup, just flow.',
-  //   // images: [''],
-  // },
+  twitter: {
+    card: 'summary_large_image',
+    title: `${SITE_NAME}官网 | 安卓版免费下载`,
+    description: '海量电影电视剧综艺动漫聚合，高清秒播、离线缓存、追剧提醒，安卓免费看剧神器。',
+    images: ['/og-image.png'],
+  },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
   },
+  other: {
+    'baidu-site-verification': '',
+    'msvalidate.01': '',
+    'applicable-device': 'pc,mobile',
+    'mobile-web-app-capable': 'yes',
+    'format-detection': 'telephone=no',
+  },
+  category: 'technology',
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: '#0c070b',
+  colorScheme: 'dark',
 };
 
 export default function RootLayout({
@@ -61,9 +88,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`antialiased`}>
-        {children}
+    <html lang="zh-CN" className="dark" suppressHydrationWarning>
+      <body className="min-h-screen bg-[#0c070b] text-[#f5ecf0] antialiased">
+        <BaiduTongji />
+        <BaiduAutoPush />
+        <SiteHeader />
+        <main>{children}</main>
+        <SiteFooter />
       </body>
     </html>
   );

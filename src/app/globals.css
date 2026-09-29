@@ -1,3 +1,4 @@
+@import "https://fonts.googleapis.cn/css2?family=Noto+Sans+SC:wght@400;500;700;800&family=Noto+Serif+SC:wght@600;700;900&display=swap";
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
@@ -35,6 +36,9 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
+  --color-neon-pink: #ff3cdf;
+  --color-neon-amber: #ffa41b;
+  --color-neon-red: #ff5a33;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -43,9 +47,9 @@
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
   --font-sans:
-    'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', ui-sans-serif,
-    system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    'Helvetica Neue', Arial, sans-serif;
+    'Noto Sans SC', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, sans-serif;
   --font-mono:
     ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
     'Courier New', monospace;
@@ -55,83 +59,155 @@
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --radius: 0.75rem;
+  /* 午夜影院深色基调（全站固定暗色） */
+  --background: #0c070b;
+  --foreground: #f5ecf0;
+  --card: #171015;
+  --card-foreground: #f5ecf0;
+  --popover: #171015;
+  --popover-foreground: #f5ecf0;
+  --primary: #ff5a33;
+  --primary-foreground: #ffffff;
+  --secondary: #241820;
+  --secondary-foreground: #f5ecf0;
+  --muted: #1d1319;
+  --muted-foreground: #b8a3ab;
+  --accent: #2a1e26;
+  --accent-foreground: #f5ecf0;
+  --destructive: #ef4444;
+  --border: #2a1e26;
+  --input: #2a1e26;
+  --ring: rgba(255, 60, 223, 0.45);
+  --chart-1: #ff3cdf;
+  --chart-2: #ffa41b;
+  --chart-3: #ff5a33;
+  --chart-4: #f30fd0;
+  --chart-5: #ffce2e;
+  --sidebar: #120b10;
+  --sidebar-foreground: #f5ecf0;
+  --sidebar-primary: #ff5a33;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #241820;
+  --sidebar-accent-foreground: #f5ecf0;
+  --sidebar-border: #2a1e26;
+  --sidebar-ring: rgba(255, 60, 223, 0.45);
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  --background: #0c070b;
+  --foreground: #f5ecf0;
+  --card: #171015;
+  --card-foreground: #f5ecf0;
+  --popover: #171015;
+  --popover-foreground: #f5ecf0;
+  --primary: #ff5a33;
+  --primary-foreground: #ffffff;
+  --secondary: #241820;
+  --secondary-foreground: #f5ecf0;
+  --muted: #1d1319;
+  --muted-foreground: #b8a3ab;
+  --accent: #2a1e26;
+  --accent-foreground: #f5ecf0;
+  --destructive: #ef4444;
+  --border: #2a1e26;
+  --input: #2a1e26;
+  --ring: rgba(255, 60, 223, 0.45);
 }
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    border-color: var(--border);
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-background text-foreground;
+    background-color: var(--background);
+    color: var(--foreground);
+    font-feature-settings: 'kern';
+  }
+
+  ::selection {
+    background: rgba(255, 60, 223, 0.35);
+    color: #fff;
   }
 }
 
-body {
-  @apply font-sans;
+@layer utilities {
+  /* 品牌霓虹渐变文字 */
+  .text-gradient-brand {
+    background: linear-gradient(90deg, #ff3cdf 0%, #ffa41b 52%, #ff5a33 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* 深色玻璃卡片 */
+  .glass-card {
+    background: linear-gradient(160deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.012));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  }
+
+  .glass-card-hover {
+    transition:
+      transform 0.25s ease,
+      border-color 0.25s ease,
+      box-shadow 0.25s ease;
+  }
+
+  .glass-card-hover:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 60, 223, 0.4);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.06),
+      0 12px 40px rgba(243, 15, 208, 0.12);
+  }
+
+  /* 票根撕口虚线 */
+  .ticket-edge {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 50%, transparent 50%);
+    background-size: 1px 10px;
+    background-repeat: repeat-y;
+  }
+
+  /* 胶片孔条 */
+  .film-strip {
+    background-image:
+      linear-gradient(to right, #0c070b 50%, transparent 50%),
+      linear-gradient(to right, #0c070b 50%, transparent 50%);
+    background-size: 18px 10px;
+    background-position:
+      left 6px top,
+      left 6px bottom;
+    background-repeat: repeat-x;
+  }
+
+  /* 胶片颗粒覆盖层 */
+  .grain-overlay::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 60;
+    pointer-events: none;
+    opacity: 0.05;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="none">
+  <defs>
+    <linearGradient id="gYellow" x1="256" y1="170" x2="846" y2="500" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFCE2E"/>
+      <stop offset="0.55" stop-color="#FFA41B"/>
+      <stop offset="1" stop-color="#FB8A0C"/>
+    </linearGradient>
+    <linearGradient id="gMagenta" x1="256" y1="170" x2="332" y2="862" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FF3CDF"/>
+      <stop offset="0.5" stop-color="#F30FD0"/>
+      <stop offset="1" stop-color="#D800C2"/>
+    </linearGradient>
+    <linearGradient id="gRed" x1="332" y1="862" x2="846" y2="500" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#E91A1A"/>
+      <stop offset="0.55" stop-color="#F63B22"/>
+      <stop offset="1" stop-color="#FF6B3D"/>
+    </linearGradient>
+  </defs>
+  <!-- magenta band: beyond bottom -> beyond top-left -->
+  <line x1="333.7" y1="877.9" x2="254.3" y2="154.1" stroke="url(#gMagenta)" stroke-width="190" stroke-linecap="round"/>
+  <!-- yellow band: before top-left -> beyond right -->
+  <line x1="242.0" y1="162.2" x2="860.0" y2="507.8" stroke="url(#gYellow)" stroke-width="190" stroke-linecap="round"/>
+  <!-- red band: right -> 171px before bottom -->
+  <line x1="832.9" y1="509.2" x2="471.8" y2="763.5" stroke="url(#gRed)" stroke-width="190" stroke-linecap="round"/>
+  <!-- magenta tip patch over red at bottom apex -->
+  <line x1="528.2" y1="723.8" x2="318.9" y2="871.2" stroke="url(#gMagenta)" stroke-width="190" stroke-linecap="round"/>
+</svg>
