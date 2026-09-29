@@ -25,7 +25,7 @@ const ICONS: Record<string, typeof Film> = {
 };
 
 export const metadata: Metadata = {
-  title: '影视资源 - 电影、电视剧、综艺、动漫频道大全',
+  title: '影视资源：电影、电视剧、综艺、动漫频道大全',
   description:
     '麻花影视资源频道总览：38000+ 部电影、16000+ 部电视剧、9500+ 部综艺、22000+ 部动漫持续更新，动作喜剧爱情科幻悬疑、美剧韩剧日剧新番一站看全，安卓手机免费追剧。',
   keywords: [

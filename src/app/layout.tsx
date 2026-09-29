@@ -15,8 +15,8 @@ const siteUrl = getSiteUrl();
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: `${SITE_NAME}官网 - 安卓版免费下载安装 | 口袋里的随身影院`,
-    template: `%s | ${SITE_NAME}官网`,
+    default: `${SITE_NAME} - 安卓版免费下载安装 | 口袋里的随身影院`,
+    template: `${SITE_NAME} - %s`,
   },
   description: SITE_DESCRIPTION,
   keywords: SITE_KEYWORDS,

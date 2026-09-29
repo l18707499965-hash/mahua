@@ -31,7 +31,7 @@ const ICONS: Record<string, LucideIcon> = {
 };
 
 export const metadata: Metadata = {
-  title: '功能特色 - 高清秒播、全网搜索、追剧收藏、离线投屏',
+  title: '功能特色：高清秒播、全网搜索、追剧收藏、离线投屏',
   description:
     '麻花影视八大核心功能详解：海量影视聚合、1080P 蓝光秒播、智能全网搜索、追剧收藏提醒、离线缓存下载、电视投屏、轻量省流与安全绿色，安卓看剧一个 App 就够。',
   keywords: ['麻花影视功能', '影视app功能', '高清播放器', '离线缓存', '追剧提醒', '电视投屏'],

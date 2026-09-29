@@ -31,7 +31,7 @@ import {
 } from '@/lib/site';
 
 export const metadata: Metadata = {
-  title: '安卓版下载 - 官方 APK 免费下载安装',
+  title: '安卓版下载：官方 APK 免费下载安装',
   description:
     '麻花影视安卓版官方下载入口，免费下载最新版 APK 安装包：海量电影电视剧综艺动漫聚合、1080P 高清秒播、离线缓存、追剧提醒与电视投屏，附详细安装教程与版本更新日志。',
   keywords: [

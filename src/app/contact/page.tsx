@@ -7,7 +7,7 @@ import { JsonLd } from '@/components/analytics';
 import { breadcrumbJsonLd } from '@/lib/jsonld';
 
 export const metadata: Metadata = {
-  title: '联系我们 - 意见反馈、播放报错与商务合作',
+  title: '联系我们：意见反馈、播放报错与商务合作',
   description:
     '联系麻花影视团队：App 内意见反馈、片源报错上报、版权投诉处理与商务合作渠道说明。我们重视每一条用户声音，会持续改进产品体验。',
   keywords: ['麻花影视客服', '麻花影视联系方式', '麻花影视反馈', '片源报错', '版权投诉'],

@@ -15,7 +15,7 @@ import { breadcrumbJsonLd, faqPageJsonLd } from '@/lib/jsonld';
 import { FAQS, FAQ_CATEGORIES } from '@/lib/content';
 
 export const metadata: Metadata = {
-  title: '常见问题 - 下载安装、播放使用、账号安全与版权说明',
+  title: '常见问题：下载安装、播放使用、账号安全与版权说明',
   description:
     '麻花影视常见问题大全：安卓 APK 如何下载安装、未知来源权限怎么开、无法播放如何切换线路、是否收费、是否安全、收藏进度如何同步、版权内容如何处理，答案一次讲清楚。',
   keywords: ['麻花影视常见问题', '麻花影视怎么下载', '麻花影视无法播放', '麻花影视安全吗', '麻花影视收费吗'],

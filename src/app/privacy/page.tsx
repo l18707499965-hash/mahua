@@ -5,7 +5,7 @@ import { JsonLd } from '@/components/analytics';
 import { breadcrumbJsonLd } from '@/lib/jsonld';
 
 export const metadata: Metadata = {
-  title: '隐私政策 - 个人信息收集与保护说明',
+  title: '隐私政策：个人信息收集与保护说明',
   description:
     '麻花影视隐私政策：说明我们在你使用 App 时收集哪些信息、如何使用与存储、如何共享与保护，以及你享有的个人信息权利。我们坚持最小必要与公开透明原则。',
   keywords: ['麻花影视隐私政策', '隐私政策', '个人信息保护'],

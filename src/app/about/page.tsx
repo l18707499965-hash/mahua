@@ -10,7 +10,7 @@ import { breadcrumbJsonLd, organizationJsonLd } from '@/lib/jsonld';
 import { STATS } from '@/lib/content';
 
 export const metadata: Metadata = {
-  title: '关于我们 - 品牌故事、使命与产品理念',
+  title: '关于我们：品牌故事、使命与产品理念',
   description:
     '了解麻花影视团队：我们相信好内容不该被平台壁垒困住，致力于做简单、干净、好用的影视聚合工具，让每个人用一部手机就能拥有一间随身影院。',
   keywords: ['关于麻花影视', '麻花影视团队', '麻花影视品牌故事', '影视聚合工具'],

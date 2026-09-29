@@ -5,7 +5,7 @@ import { JsonLd } from '@/components/analytics';
 import { breadcrumbJsonLd } from '@/lib/jsonld';
 
 export const metadata: Metadata = {
-  title: '用户协议 - 服务条款与版权声明',
+  title: '用户协议：服务条款与版权声明',
   description:
     '麻花影视用户协议与版权声明：说明服务性质、用户行为规范、知识产权归属、侵权通知与处理流程、免责声明等内容。使用本应用即表示同意本协议。',
   keywords: ['麻花影视用户协议', '服务条款', '版权声明', '侵权投诉'],
